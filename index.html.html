@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Complaint Registration System</title>
+
+<style>
+/* ======= GLOBAL ======= */
+:root {
+  --primary: #007bff;
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --text: #0f172a;
+  --radius: 12px;
+  --shadow: 0 4px 14px rgba(0,0,0,0.1);
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ======= HEADER ======= */
+header {
+  background: var(--primary);
+  padding: 15px 20px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h2 {
+  margin: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+/* ======= CONTAINER ======= */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* ======= CARD ======= */
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 30px;
+}
+
+/* ======= FORM ======= */
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+select,
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056c7;
+}
+
+/* ======= FOOTER ======= */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: var(--primary);
+  color: #fff;
+  margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>Online Complaint Registration System</h2>
+  <nav>
+    <a href="#register">Register</a>
+    <a href="#track">Track</a>
+    <a href="#info">Info</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- Complaint Registration -->
+  <div id="register" class="card">
+    <h2>Register a Complaint</h2>
+
+    <label for="cname">Your Name</label>
+    <input type="text" id="cname" placeholder="Enter your name">
+
+    <label for="cemail">Email</label>
+    <input type="email" id="cemail" placeholder="your@email.com">
+
+    <label for="ctype">Complaint Type</label>
+    <select id="ctype">
+      <option>Select Complaint Type</option>
+      <option>Street Light</option>
+      <option>Water Pipe Leakage</option>
+      <option>Rain Water Drainage</option>
+      <option>Road Problem</option>
+      <option>Others</option>
+    </select>
+
+    <label for="location">Location</label>
+    <input type="text" id="location" placeholder="Enter location">
+
+    <label for="cdesc">Complaint Description</label>
+    <textarea id="cdesc" rows="4" placeholder="Describe the issue"></textarea>
+
+    <button>Submit Complaint</button>
+  </div>
+
+  <!-- Complaint Tracking -->
+  <div id="track" class="card">
+    <h2>Track Complaint Status</h2>
+
+    <label for="ticket">Enter Complaint ID</label>
+    <input type="text" id="ticket" placeholder="e.g., CMP12345">
+
+    <button>Check Status</button>
+  </div>
+
+  <!-- System Information -->
+  <div id="info" class="card">
+    <h2>About This System</h2>
+    <p class="small">
+      This Online Complaint Registration & Management System allows citizens to report issues like
+      street light faults, water pipe leakage, road problems, drainage issues, and more.
+      Municipal authorities can track and resolve complaints efficiently.
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 Online Complaint Management System | Developed for Mini Project
+</footer>
+
+</body>
+</html>
